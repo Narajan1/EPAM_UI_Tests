@@ -2,7 +2,7 @@ const loginPageElement = require("../../support/loginPageElements")
 const credentials = require("../../support/constants")
 const addRemovePageElements = require("../../support/addRemovePageElements")
 
-describe('Form Authentication functionality', () => {
+describe('Task 1', () => {
     beforeEach(async () => {
         await browser.url("/");
         await expect(browser).toHaveTitle('The Internet');
