@@ -5,10 +5,11 @@ const addRemovePageElements = require("../../support/addRemovePageElements")
 describe('Task 1', () => {
     beforeEach(async () => {
         await browser.url("/");
+        await browser.maximizeWindow();
         await expect(browser).toHaveTitle('The Internet');
     })
 
-    it.skip('should login with valid credentials', async () => {
+    it('should login with valid credentials', async () => {
         await loginPageElement.clickOnFormAuthenticationLink();
         await expect(loginPageElement.loginPageMsg).toHaveText("Login Page");
         await loginPageElement.setUsername(credentials.validUsername);
@@ -17,7 +18,7 @@ describe('Task 1', () => {
         await expect(loginPageElement.successMsg).toBeExisting();
     })
 
-    it.skip('should not login with invalid credentials', async () => {
+    it('should not login with invalid credentials', async () => {
         await loginPageElement.clickOnFormAuthenticationLink();
         await expect(loginPageElement.loginPageMsg).toHaveText("Login Page");
         await loginPageElement.setUsername(credentials.invalidUsename);

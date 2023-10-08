@@ -3,6 +3,14 @@ module.exports = {
     validPassword: "SuperSecretPassword!",
 
     invalidUsename: "Nara",
-    invalidPassword: "Dilijan"
+    invalidPassword: "Dilijan",
+
+    dynamicLoadPagePath: "/dynamic_loading/1",
+    helloworldTxt: "Hello World!",
+
+    inputTxt: "No War!",
+    additionalTxt: " In the world",
+
+    selTitle: "Elemental Selenium | Elemental Selenium"
 
 }
