@@ -1,3 +1,5 @@
+const customCommands = require("./support/customCommands")
+
 const {
     existsSync,
     mkdirSync
@@ -192,8 +194,11 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        Object.keys(customCommands).forEach(key => {
+            browser.addCommand(key, customCommands[key]);
+        })
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {string} commandName hook command name
